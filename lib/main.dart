@@ -1,8 +1,54 @@
 import 'package:digitalm/screens/homescreen.dart';
 import 'package:digitalm/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert'; // for JSON decoding
 
-void main() {
+final String apiUrl = "https://randomuser.me/api/";
+
+class User {
+  final String name;
+  final String email;
+  final String picture;
+
+  User({required this.name, required this.email, required this.picture});
+
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      name: json['name']['first'] + " " + json['name']['last'],
+      email: json['email'],
+      picture: json['picture']['large'],
+    );
+  }
+}
+
+Future<List<User>> fetchUsers() async {
+  final response = await http.get(Uri.parse(apiUrl));
+
+  if (response.statusCode == 200) {
+    // Parse the JSON response
+    final Map<String, dynamic> data = json.decode(response.body);
+    final List<dynamic> results = data['results'];
+
+    // Map the JSON data to a list of User objects
+    return results.map((item) => User.fromJson(item)).toList();
+  } else {
+    // Handle error
+    throw Exception('Failed to load users');
+  }
+}
+
+void main() async{
+  final users = await fetchUsers();
+
+  // Use the users in your app
+  for (User user in users) {
+    print("Name: ${user.name}");
+    print("Email: ${user.email}");
+    print("Picture URL: ${user.picture}");
+    print("--------");
+  }
+
   runApp(const MyApp());
 }
 
