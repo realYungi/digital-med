@@ -1,6 +1,8 @@
 import 'package:digitalm/screens/homescreen.dart';
 import 'package:digitalm/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:digitalm/screens/mainpage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
     
       ),
 
-      home: HomeScreen(),
+      home: MainPage(),
       
     );
   }
