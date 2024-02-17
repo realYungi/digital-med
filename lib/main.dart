@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert'; // for JSON decoding
 
-final String apiUrl = "https://randomuser.me/api/";
+final String apiUrl = "http://string-db.org/api/json/resolve?identifier=ADD&species=9606";
+final String baseUrl = "http://string-db.org/api/json/";
 
 class User {
   final String name;
