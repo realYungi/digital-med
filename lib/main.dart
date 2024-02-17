@@ -11,13 +11,6 @@ import 'package:digitalm/testnotifier.dart';
 final String apiUrl = "http://string-db.org/api/json/resolve?identifier=ADD&species=9606";
 final String baseUrl = "http://string-db.org/api/json/";
 
-<<<<<<< HEAD
-void main() async{
-  runApp(const MyApp());
-}
-=======
->>>>>>> master
-
 void main() => runApp(ChangeNotifierProvider(
   create: (context) => TestNotifier(),
   child: MyApp(),

@@ -57,6 +57,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       name: _titleController.text,
                       description: _descriptionController.text,
                       createdAt: _selectedDate,
+                      ingredients: [],
                     ));
                     Navigator.pushReplacement(
                       context,
