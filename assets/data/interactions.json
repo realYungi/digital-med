@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "drug1_id": 1,
+    "drug2_id": 2,
+    "severity": "Moderate",
+    "description": "Combining aspirin and paracetamol may increase the risk of gastrointestinal bleeding.",
+    "management_recommendations": "Use caution and monitor for signs of bleeding."
+  },
+  {
+    "id": 2,
+    "drug1_id": 1,
+    "drug2_id": 3,
+    "severity": "Moderate",
+    "description": "Combining aspirin and ibuprofen may increase the risk of gastrointestinal bleeding.",
+    "management_recommendations": "Avoid concurrent use or use with caution under medical supervision."
+  },
+  {
+    "id": 3,
+    "drug1_id": 2,
+    "drug2_id": 3,
+    "severity": "Minor",
+    "description": "Combining paracetamol and ibuprofen may potentiate the analgesic effects.",
+    "management_recommendations": "May be used together for added pain relief, but monitor for adverse effects."
+  },
+  {
+    "id": 4,
+    "drug1_id": 4,
+    "drug2_id": 2,
+    "severity": "Minor",
+    "description": "Combining cough syrup and paracetamol may increase the risk of drowsiness and dizziness.",
+    "management_recommendations": "Use caution when driving or operating machinery."
+  }
+]

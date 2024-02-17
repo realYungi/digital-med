@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Aspirin",
+    "description": "Aspirin is a commonly used pain reliever and anti-inflammatory medication.",
+    "ingredients": [
+      {
+        "id": 1,
+        "name": "Acetylsalicylic Acid",
+        "description": "Acetylsalicylic acid is the active ingredient in aspirin.",
+        "overdoseEffect": "Overdose of acetylsalicylic acid can cause gastrointestinal bleeding and other serious complications.",
+        "sideEffect": "Common side effects of aspirin include stomach upset and heartburn."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Paracetamol",
+    "description": "Paracetamol, also known as acetaminophen, is a commonly used pain reliever and fever reducer.",
+    "ingredients": [
+      {
+        "id": 2,
+        "name": "Paracetamol",
+        "description": "Paracetamol is the active ingredient in this medication.",
+        "overdoseEffect": "Overdose of paracetamol can lead to liver damage or failure.",
+        "sideEffect": "Side effects of paracetamol are rare but may include liver toxicity at high doses."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Ibuprofen",
+    "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for pain relief and reducing inflammation.",
+    "ingredients": [
+      {
+        "id": 3,
+        "name": "Ibuprofen",
+        "description": "Ibuprofen is the active ingredient in this medication.",
+        "overdoseEffect": "Overdose of ibuprofen can cause stomach bleeding, kidney damage, and other serious complications.",
+        "sideEffect": "Common side effects of ibuprofen include stomach upset, heartburn, and dizziness."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Cough Syrup",
+    "description": "Cough syrup is used to relieve cough symptoms associated with colds and respiratory infections.",
+    "ingredients": [
+      {
+        "id": 4,
+        "name": "Dextromethorphan",
+        "description": "Dextromethorphan is a cough suppressant.",
+        "overdoseEffect": "Overdose of dextromethorphan can cause dizziness, drowsiness, and nausea.",
+        "sideEffect": "Common side effects of dextromethorphan include drowsiness and dizziness."
+      },
+      {
+        "id": 5,
+        "name": "Guaifenesin",
+        "description": "Guaifenesin is an expectorant that helps loosen mucus and phlegm.",
+        "overdoseEffect": "Overdose of guaifenesin is unlikely, but large doses may cause nausea and vomiting.",
+        "sideEffect": "Common side effects of guaifenesin include nausea and vomiting."
+      }
+    ]
+  }
+]

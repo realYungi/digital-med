@@ -54,6 +54,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         Provider.of<TestNotifier>(context, listen: false);
                     // Create Test object and add it
                     testNotifier.addMedicine(Medicine(
+                      id: 0,
                       name: _titleController.text,
                       description: _descriptionController.text,
                       createdAt: _selectedDate,
