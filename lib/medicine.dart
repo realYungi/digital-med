@@ -24,6 +24,7 @@ class Medicine {
       id: json['id'],
       name: json['name'],
       description: json['description'],
+      createdAt: DateTime.now(),
       ingredients: ingredients,
     );
   }

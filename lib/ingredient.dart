@@ -12,4 +12,13 @@ class Ingredient{
     required this.overdoseEffect,
     required this.sideEffect,
   });
+  factory Ingredient.fromJson(Map<String, dynamic> json) {
+    return Ingredient(
+      id: json['id'],
+      name: json['name'],
+      description: json['description'],
+      overdoseEffect: json['overdoseEffect'],
+      sideEffect: json['sideEffect'],
+    );
+  }
 }
