@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'emailverificationscreen.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class SignupScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Sign Up text
-            Text(
+            const Text(
               "Sign Up",
               style: TextStyle(
                 fontSize: 24,
@@ -21,18 +21,18 @@ class SignupScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Name, Email, and Password input fields
             Column(
               children: [
                 buildTextInputField("Name"),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 buildTextInputField("Email"),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 buildTextInputField("Password"),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Sign Up button
             Container(
               width: 300,
@@ -48,11 +48,11 @@ class SignupScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => EmailVerificationScreen()),
+                        builder: (context) => const EmailVerificationScreen()),
                   );
                 },
                 child: Container(
-                  child: Text(
+                  child: const Text(
                     "Sign Up",
                     style: TextStyle(
                       fontSize: 18,
@@ -81,7 +81,7 @@ class SignupScreen extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.symmetric(horizontal: 20),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20),
         ),
       ),
     );

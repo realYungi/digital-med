@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -14,14 +14,14 @@ class _HomeScreenState extends State<HomeScreen> {
   late DateTime _focusedDay = DateTime.now();
   int currentPageIndex = 0;
 
-  final todayDayTextStyle = TextStyle(
+  final todayDayTextStyle = const TextStyle(
     fontWeight: FontWeight.bold,
     color: Colors.blue,
   );
 
   final todayBorderColor = Colors.blue;
 
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Welcome back,',
                     style: TextStyle(
                       fontSize: 20,
@@ -66,8 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               padding: const EdgeInsets.all(20),
               child: TableCalendar(
-                firstDay: DateTime.now().subtract(Duration(days: 365)),
-                lastDay: DateTime.now().add(Duration(days: 365)),
+                firstDay: DateTime.now().subtract(const Duration(days: 365)),
+                lastDay: DateTime.now().add(const Duration(days: 365)),
                 focusedDay: _focusedDay,
                 currentDay: _currentDay,
                 calendarFormat: _calendarFormat,
@@ -92,8 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 selectedDayPredicate: (day) => isSameDay(_currentDay, day),
               ),
             ),
-            SizedBox(height: 30,),
-            Text(
+            const SizedBox(height: 30,),
+            const Text(
               'Recent Activities',
               style: TextStyle(
                 fontSize: 20,

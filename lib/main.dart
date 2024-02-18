@@ -1,16 +1,12 @@
-import 'package:digitalm/screens/homescreen.dart';
-import 'package:digitalm/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:digitalm/screens/mainpage.dart';
 import 'package:provider/provider.dart';
-import 'package:digitalm/testnotifier.dart';
 
 
 
-void main() => runApp(ChangeNotifierProvider(
-  create: (context) => TestNotifier(),
-  child: MyApp(),
-));
+void main() => runApp(MyApp(),
+);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -27,7 +23,7 @@ class MyApp extends StatelessWidget {
     
       ),
 
-      home: MainPage(),
+      home: const MainPage(),
       
     );
   }

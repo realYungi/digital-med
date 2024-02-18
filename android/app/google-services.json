@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049372558238",
+    "project_id": "digitalm-e9d49",
+    "storage_bucket": "digitalm-e9d49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049372558238:android:1b95d06f7ee19320334c8f",
+        "android_client_info": {
+          "package_name": "com.example.digitalm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoWXVnMLQl2nfmfNBXXpEWmSXuxfsLljY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

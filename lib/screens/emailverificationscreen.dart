@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'homescreen.dart';
 
 class EmailVerificationScreen extends StatelessWidget {
-  const EmailVerificationScreen({Key? key}) : super(key: key);
+  const EmailVerificationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +43,9 @@ class EmailVerificationScreen extends StatelessWidget {
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: TextField(
+              child: const TextField(
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Enter Code',
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(horizontal: 20),
@@ -69,12 +69,12 @@ class EmailVerificationScreen extends StatelessWidget {
                     // Assuming successful verification:
                     Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                      MaterialPageRoute(builder: (context) => const HomeScreen()),
                       (Route route) => false, // Remove all previous routes
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
+                    backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),

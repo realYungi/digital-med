@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'signupscreen.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +26,18 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             Text(
                               word,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
                               ),
                             ),
-                            SizedBox(height: 5),
+                            const SizedBox(height: 5),
                           ],
                         ),
                     ],
                   ),
-                  SizedBox(width: 30),
+                  const SizedBox(width: 30),
                   // Display the logo aligned to the right
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
               ),
 
               // Row for "Log In" text
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Email and Password input fields
               Column(
                 children: [
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         hintText: "Email",
                         border: InputBorder.none,
@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Container(
                     width: 300,
                     height: 50,
@@ -93,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         hintText: "Password",
                         border: InputBorder.none,
@@ -102,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                       obscureText: true,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Log In button
                   InkWell(
                     onTap: () {
@@ -115,7 +115,7 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Log In",
                           style: TextStyle(
@@ -131,10 +131,10 @@ class LoginScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SignupScreen()),
+                          MaterialPageRoute(builder: (context) => const SignupScreen()),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         "No account? Sign Up",
                         style: TextStyle(
                           fontSize: 16,

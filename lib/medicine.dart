@@ -1,12 +1,13 @@
 class Medicine {
   final String name;
   final String description;
-  final DateTime createdAt; // Time medicine was added
+  final DateTime dateTimeCreated; // New property for storing creation date and time
+  bool isDone;
 
-  const Medicine({
+  Medicine({
     required this.name,
     required this.description,
-    required this.createdAt,
+    required this.dateTimeCreated,
+    this.isDone = false,
   });
 }
-
