@@ -4,15 +4,17 @@ class Medicine {
   final int id;
   final String name;
   final String description;
-  final DateTime createdAt; // Time medicine was added
+  final DateTime dateTimeCreated; // New property for storing creation date and time
   final List<Ingredient> ingredients;
+  bool isDone;
 
   const Medicine({
     required this.id,
     required this.name,
     required this.description,
-    required this.createdAt,
+    required this.dateTimeCreated,
     required this.ingredients,
+    required this.isDone=false,
   });
   
   factory Medicine.fromJson(Map<String, dynamic> json) {
