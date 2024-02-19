@@ -8,13 +8,13 @@ class Medicine {
   final List<Ingredient> ingredients;
   bool isDone;
 
-  const Medicine({
+  Medicine({
     required this.id,
     required this.name,
     required this.description,
     required this.dateTimeCreated,
     required this.ingredients,
-    required this.isDone=false,
+    required this.isDone,
   });
   
   factory Medicine.fromJson(Map<String, dynamic> json) {
@@ -26,8 +26,9 @@ class Medicine {
       id: json['id'],
       name: json['name'],
       description: json['description'],
-      createdAt: DateTime.now(),
+      dateTimeCreated: DateTime.now(),
       ingredients: ingredients,
+      isDone: false,
     );
   }
 }

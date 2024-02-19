@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:digitalm/screens/mainpage.dart';
 import 'dart:convert'; // for JSON decoding
 import 'package:provider/provider.dart';
-import 'package:digitalm/testnotifier.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 // ignore plz

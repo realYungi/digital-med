@@ -98,6 +98,9 @@ class MedicineListScreen extends StatelessWidget {
                 if (_medicineName.isNotEmpty &&
                     _medicineDescription.isNotEmpty) {
                   final newMedicine = Medicine(
+                    id: 0,
+                    ingredients: [],
+                    isDone: false,
                     name: _medicineName,
                     description: _medicineDescription,
                     dateTimeCreated: DateTime.now(),

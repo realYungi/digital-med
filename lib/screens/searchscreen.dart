@@ -151,7 +151,7 @@ class MedicineCard extends StatelessWidget {
                         'Severity: ${interaction['severity']}',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text(interaction['description']),
+                      Text(interaction['description']!),
                       SizedBox(height: 4),
                       Text(
                         'Management Recommendations: ${interaction['management_recommendations']}',
