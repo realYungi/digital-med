@@ -80,10 +80,7 @@ class _BottomNavigationBarExampleState
     ),
     // Use MedicineListStateContainer instead of directly MedicineListScreen
     const MedicineListStateContainer( medicines: [],),
-    const Text(
-      'Index 3: Profile',
-      style: optionStyle,
-    ),
+   
   ];
 
   @override
@@ -117,10 +114,7 @@ class _BottomNavigationBarExampleState
             icon: Icon(Icons.history),
             label: 'History',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
+         
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,
