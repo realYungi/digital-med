@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:digitalm/screens/mainpage.dart';
-import 'package:provider/provider.dart';
 
 
 
-void main() => runApp(MyApp(),
+void main() => runApp(const MyApp(),
 );
 
 class MyApp extends StatelessWidget {

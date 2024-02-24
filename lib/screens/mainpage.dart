@@ -21,9 +21,9 @@ class MedicineListStateContainer extends StatefulWidget {
   final List<Medicine> medicines;
   
   const MedicineListStateContainer({
-    Key? key,
+    super.key,
     required this.medicines,
-  }) : super(key: key);
+  });
 
   @override
   _MedicineListStateContainerState createState() =>
@@ -59,7 +59,7 @@ class _MedicineListStateContainerState
 
 
 class BottomNavigationBarExample extends StatefulWidget {
-  const BottomNavigationBarExample({Key? key}) : super(key: key);
+  const BottomNavigationBarExample({super.key});
 
   @override
   State<BottomNavigationBarExample> createState() =>
@@ -79,7 +79,7 @@ class _BottomNavigationBarExampleState
       style: optionStyle,
     ),
     // Use MedicineListStateContainer instead of directly MedicineListScreen
-    MedicineListStateContainer( medicines: [],),
+    const MedicineListStateContainer( medicines: [],),
     const Text(
       'Index 3: Profile',
       style: optionStyle,

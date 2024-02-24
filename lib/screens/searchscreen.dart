@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MedicineSearchScreen extends StatefulWidget {
+  const MedicineSearchScreen({super.key});
+
   @override
   _MedicineSearchScreenState createState() => _MedicineSearchScreenState();
 }
@@ -44,18 +46,18 @@ class _MedicineSearchScreenState extends State<MedicineSearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Medicine Interaction'),
+        title: const Text('Medicine Interaction'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Search for Medicine',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               onChanged: (value) {
                 setState(() {
@@ -63,12 +65,12 @@ class _MedicineSearchScreenState extends State<MedicineSearchScreen> {
                   _showResults = _searchQuery.isNotEmpty;
                 });
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Enter medicine name',
                 prefixIcon: Icon(Icons.search),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _showResults
                 ? Expanded(
                     child: ListView.builder(
@@ -79,7 +81,7 @@ class _MedicineSearchScreenState extends State<MedicineSearchScreen> {
 
                         // Filter medicine data based on search query
                         if (!name.contains(_searchQuery)) {
-                          return SizedBox.shrink(); // Hide if not matched
+                          return const SizedBox.shrink(); // Hide if not matched
                         }
 
                         return MedicineCard(
@@ -91,7 +93,7 @@ class _MedicineSearchScreenState extends State<MedicineSearchScreen> {
                       },
                     ),
                   )
-                : SizedBox.shrink(),
+                : const SizedBox.shrink(),
           ],
         ),
       ),
@@ -105,7 +107,7 @@ class MedicineCard extends StatelessWidget {
   final List<String> ingredients;
   final List<Map<String, String>> interactions;
 
-  const MedicineCard({
+  const MedicineCard({super.key, 
     required this.name,
     required this.description,
     required this.ingredients,
@@ -116,46 +118,46 @@ class MedicineCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               name,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(description),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               'Ingredients: ${ingredients.join(", ")}',
-              style: TextStyle(fontStyle: FontStyle.italic),
+              style: const TextStyle(fontStyle: FontStyle.italic),
             ),
-            SizedBox(height: 8),
-            Text(
+            const SizedBox(height: 8),
+            const Text(
               'Interactions:',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: interactions.map((interaction) {
                 return Padding(
-                  padding: EdgeInsets.only(left: 16),
+                  padding: const EdgeInsets.only(left: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Severity: ${interaction['severity']}',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text(interaction['description']),
-                      SizedBox(height: 4),
+                      Text(interaction['description']!),
+                      const SizedBox(height: 4),
                       Text(
                         'Management Recommendations: ${interaction['management_recommendations']}',
-                        style: TextStyle(fontStyle: FontStyle.italic),
+                        style: const TextStyle(fontStyle: FontStyle.italic),
                       ),
                     ],
                   ),

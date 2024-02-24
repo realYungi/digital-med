@@ -5,20 +5,20 @@ class MedicineListScreen extends StatelessWidget {
   final List<Medicine> medicines;
   final void Function(List<Medicine>) updateMedicineList;
   
-  MedicineListScreen({
-    Key? key,
+  const MedicineListScreen({
+    super.key,
     required this.medicines,
     required this.updateMedicineList,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    late String _medicineName;
-    late String _medicineDescription;
+    late String medicineName;
+    late String medicineDescription;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Medicine List'),
+        title: const Text('Medicine List'),
       ),
       body: ListView.builder(
         itemCount: medicines.length,
@@ -30,11 +30,11 @@ class MedicineListScreen extends StatelessWidget {
                 Text(medicines[index].name),
                 Text(
                   medicines[index].description,
-                  style: TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.grey),
                 ),
                 Text(
                   'Created: ${medicines[index].dateTimeCreated.toString()}',
-                  style: TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.grey),
                 ),
               ],
             ),
@@ -59,30 +59,30 @@ class MedicineListScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () => _addMedicine(context),
         tooltip: 'Add Medicine',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
 
   void _addMedicine(BuildContext context) async {
-    late String _medicineName;
-    late String _medicineDescription;
+    late String medicineName;
+    late String medicineDescription;
 
     final medicine = await showDialog<Medicine>(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('New Medicine'),
+          title: const Text('New Medicine'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               TextField(
-                decoration: InputDecoration(labelText: 'Medicine Name'),
-                onChanged: (value) => _medicineName = value,
+                decoration: const InputDecoration(labelText: 'Medicine Name'),
+                onChanged: (value) => medicineName = value,
               ),
               TextField(
-                decoration: InputDecoration(labelText: 'Description'),
-                onChanged: (value) => _medicineDescription = value,
+                decoration: const InputDecoration(labelText: 'Description'),
+                onChanged: (value) => medicineDescription = value,
               ),
             ],
           ),
@@ -91,21 +91,21 @@ class MedicineListScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             TextButton(
               onPressed: () {
-                if (_medicineName.isNotEmpty &&
-                    _medicineDescription.isNotEmpty) {
+                if (medicineName.isNotEmpty &&
+                    medicineDescription.isNotEmpty) {
                   final newMedicine = Medicine(
-                    name: _medicineName,
-                    description: _medicineDescription,
+                    name: medicineName,
+                    description: medicineDescription,
                     dateTimeCreated: DateTime.now(),
                   );
                   Navigator.of(context).pop(newMedicine);
                 }
               },
-              child: Text('Add'),
+              child: const Text('Add'),
             ),
           ],
         );
